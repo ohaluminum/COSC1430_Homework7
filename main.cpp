@@ -40,13 +40,13 @@ int main()
 			getline(input, weapon_cost);
 
 			//Create the Barbarian object
-			Barbarian barbarian(name, race, stoi(level), stoi(health), stoi(stamina));
+			Barbarian *barbarian = new Barbarian(name, race, stoi(level), stoi(health), stoi(stamina));
 
 		    //Equip the weapon to the Barbarian
-			barbarian.EquipWeapon(weapon_name, stoi(weapon_damage), stoi(weapon_cost));
+			barbarian->EquipWeapon(weapon_name, stoi(weapon_damage), stoi(weapon_cost));
 
 			//Add the Barbarian character to the game
-			game.AddCharacter(&barbarian);
+			game.AddCharacter(barbarian);
 		}
 		
 		else if (occupation == "Mage") {
@@ -54,7 +54,7 @@ int main()
 			getline(input, mana);
 
 			//Create a Mage object
-			Mage mage(name, race, stoi(level), stoi(health), stoi(mana));
+			Mage *mage = new Mage(name, race, stoi(level), stoi(health), stoi(mana));
 
 			string spell_num;
 			getline(input, spell_num);
@@ -66,11 +66,11 @@ int main()
 				getline(input, spell_cost);
 
 				//Add the spell to the Mage
-				mage.AddSpell(spell_name, stoi(spell_damage), stoi(spell_cost));
+				mage->AddSpell(spell_name, stoi(spell_damage), stoi(spell_cost));
 			}
 
 			//Add the Mage to the game
-			game.AddCharacter(&mage);
+			game.AddCharacter(mage);
 		}
 
 		string newline;
