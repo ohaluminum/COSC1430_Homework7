@@ -33,7 +33,7 @@ int Mage::getMana() const
  */
 int Mage::AddSpell(string spell_name, int spell_damage, int mana_cost)
 {
-	if (numOfSpells = 10)
+	if (numOfSpells == 10)
 	{
 		cout << "Spell limits reached!" << endl;
 	}

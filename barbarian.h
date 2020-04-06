@@ -12,7 +12,8 @@ struct weapon {
 	int stamina_cost = 0;
 };
 
-class Barbarian : public Character {
+class Barbarian : public Character 
+{
 private:
 	weapon active_weapon;
 	int stamina = 100;
@@ -29,7 +30,7 @@ public:
 
 	//Other functions
 	void EquipWeapon(string name, int damage, int stamina_cost);
-	void Attack(Character * target);
+	void Attack(Character *target) override;
 	void Print();
 };
 

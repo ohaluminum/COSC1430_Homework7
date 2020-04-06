@@ -5,7 +5,8 @@
 #include <string>
 using namespace std;
 
-class Character {
+class Character 
+{
 private:
 	string name;
 	string race;
@@ -23,10 +24,10 @@ public:
 	int getHealth() const;
 
 	//Setter functions
-	void SetName(string name);
-	void SetRace(string race);
-	void SetLevel(int level);
-	void SetHealth(int health);
+	void setName(string name);
+	void setRace(string race);
+	void setLevel(int level);
+	void setHealth(int health);
 	
 	//Other functions
 	void Print();

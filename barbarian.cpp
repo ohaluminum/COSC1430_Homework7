@@ -49,8 +49,25 @@ void Barbarian::EquipWeapon(string name, int damage, int stamina_cost)
  *Insufficient stamina points!
  */
 void Barbarian::Attack(Character *target)
-{
-
+{   
+    if (active_weapon.name == "")
+    {
+        cout << "Barbarian has no weapon!" << endl;
+    }
+    else
+    {
+        if (stamina < active_weapon.stamina_cost)
+        {
+            cout << "Insufficient stamina points!" << endl;
+        }
+        else 
+        {
+            target->setHealth(target->getHealth() - active_weapon.damage);
+            cout << getName() << " attacked " << target->getName() 
+                 << " with a " << active_weapon.name << ", dealing " 
+                 << active_weapon.damage << " damage." << endl;
+        }
+    }
 }
 
 /*

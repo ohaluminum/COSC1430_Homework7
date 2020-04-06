@@ -6,13 +6,15 @@
 #include "character.h"
 using namespace std;
 
-struct spell {
+struct spell 
+{
 	string name = "";
 	int damage = 0;
 	int mana_cost = 0;
 };
 
-class Mage : public Character {
+class Mage : public Character 
+{
 private:
 	spell spells[10];
 	int numOfSpells = 0;
@@ -32,7 +34,7 @@ public:
 	//Other functions
 	int AddSpell(string spell_name, int spell_damage, int mana_cost);
 	void nextSpell();
-	void Attack(Character * target);
+	void Attack(Character * target) override;
 	void Print();
 };
 

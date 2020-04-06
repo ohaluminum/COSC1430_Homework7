@@ -36,22 +36,22 @@ int Character::getHealth() const
 }
 
 //Implement setter functions
-void Character::SetName(string name)
+void Character::setName(string name)
 {
 	this->name = name;
 }
 
-void Character::SetRace(string race)
+void Character::setRace(string race)
 {
 	this->race = race;
 }
 
-void Character::SetLevel(int level)
+void Character::setLevel(int level)
 {
 	this->level = level;
 }
 
-void Character::SetHealth(int health)
+void Character::setHealth(int health)
 {
 	this->health = health;
 }
