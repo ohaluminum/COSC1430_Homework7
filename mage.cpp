@@ -120,6 +120,8 @@ void Mage::Print()
 	{
 		cout << spells[i].name << endl;
 	}
+
+	cout << endl;
 }
 
 

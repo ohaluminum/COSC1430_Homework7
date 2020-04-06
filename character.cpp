@@ -64,6 +64,7 @@ void Character::Print()
 	cout << "Race: " << race << endl;
 	cout << "Level: " << level << endl;
 	cout << "Health: " << health << endl;
+	cout << endl;
 }
 
 //Implement other functions: A public function called "Attack()" that takes a pointer to a character

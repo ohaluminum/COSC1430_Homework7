@@ -88,7 +88,8 @@ void Barbarian::Print()
     cout << "Occupation: Barbarian" << endl;
     cout << "Level: " << getLevel() << endl;
     cout << "Health: " << getHealth() << endl;
-    cout << "Heapon: " << active_weapon.name << endl;
+    cout << "Weapon: " << active_weapon.name << endl;
+    cout << endl;
 }
 
 

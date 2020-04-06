@@ -38,50 +38,58 @@ int main()
 			getline(input, weapon_name);
 			getline(input, weapon_damage);
 			getline(input, weapon_cost);
-		//	Create the Barbarian object
-		//	Equip the weapon to the Barbarian
-		//	Add the Barbarian character to the game
 
-			
+			//Create the Barbarian object
+			Barbarian barbarian(name, race, stoi(level), stoi(health), stoi(stamina));
+
+		    //Equip the weapon to the Barbarian
+			barbarian.EquipWeapon(weapon_name, stoi(weapon_damage), stoi(weapon_cost));
+
+			//Add the Barbarian character to the game
+			game.AddCharacter(&barbarian);
 		}
 		
 		else if (occupation == "Mage") {
 			string mana;
 			getline(input, mana);
 
-		//	Create a Mage object
+			//Create a Mage object
+			Mage mage(name, race, stoi(level), stoi(health), stoi(mana));
+
 			string spell_num;
 			getline(input, spell_num);
-			for (int i = 0; i < stoi(spell_num); i++) {
+			for (int i = 0; i < stoi(spell_num); i++) 
+			{
 				string spell_name, spell_damage, spell_cost;
 				getline(input, spell_name);
 				getline(input, spell_damage);
 				getline(input, spell_cost);
 
-		//		Add the spell to the Mage
-				
+				//Add the spell to the Mage
+				mage.AddSpell(spell_name, stoi(spell_damage), stoi(spell_cost));
 			}
-		//	Add the Mage to the game
 
+			//Add the Mage to the game
+			game.AddCharacter(&mage);
 		}
+
 		string newline;
 		getline(input, newline);
-
 	}
 	
+	int option = -1;
 	
-	
-		int option = -1;
 	do {
-		cout << "Please choose an option: " << endl
-			<< "1 - Next Turn" << endl
-			<< "2 - Print All Characters" << endl
-			<< "3 - Exit" << endl;
+		cout << "Please choose an option: " << endl;
+		cout << "1 - Next Turn" << endl;
+		cout << "2 - Print All Characters" << endl;
+		cout << "3 - Exit" << endl;
 
 		cin >> option;
 		cout << endl;
 
-		switch (option) {
+		switch (option) 
+		{
 			case 1: 
 				game.NextTurn(); 
 				break;
@@ -96,8 +104,9 @@ int main()
 			default:
 				cout << "Invalid Option!" << endl;
 		}
+
 		cout << endl;
-	}while (option != 3);
+	} while (option != 3);
 
 	return 0;
 }
