@@ -91,8 +91,7 @@ void Game::NextTurn()
 
         if (players[1]->getHealth() < 0)
         {
-            cout << "Player one wins!" << endl;
-            exit(0);
+            cout << players[0]->getName() << " wins!" << endl;
         }
         else
         {
@@ -100,8 +99,7 @@ void Game::NextTurn()
 
             if (players[0]->getHealth() < 0)
             {
-                cout << "Player two wins!" << endl;
-                exit(0);
+                cout << players[1]->getName() << " wins!" << endl;
             }
         }
     }

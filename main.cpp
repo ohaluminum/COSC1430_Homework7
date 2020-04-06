@@ -14,7 +14,6 @@ int main()
 {
 	string filename;
 	cin >> filename;
-	cout << filename << endl;
 	ifstream input(filename);
 
 	Game game;

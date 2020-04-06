@@ -62,10 +62,11 @@ void Barbarian::Attack(Character *target)
         }
         else 
         {
-            target->setHealth(target->getHealth() - active_weapon.damage);
+            target->SetHealth(target->getHealth() - active_weapon.damage);
             cout << getName() << " attacked " << target->getName() 
                  << " with a " << active_weapon.name << ", dealing " 
-                 << active_weapon.damage << " damage." << endl;
+                 << active_weapon.damage << " damage." 
+                 << endl;
         }
     }
 }
@@ -82,14 +83,9 @@ void Barbarian::Attack(Character *target)
  */
 void Barbarian::Print()
 {
-    cout << "Character Status: " << endl;
-    cout << "Name: " << getName() << endl;
-    cout << "Race: " << getRace() << endl;
-    cout << "Occupation: Barbarian" << endl;
-    cout << "Level: " << getLevel() << endl;
-    cout << "Health: " << getHealth() << endl;
+    Character::Print();
     cout << "Weapon: " << active_weapon.name << endl;
-    cout << endl;
+    cout << "---" << endl;
 }
 
 

@@ -36,22 +36,22 @@ int Character::getHealth() const
 }
 
 //Implement setter functions
-void Character::setName(string name)
+void Character::SetName(string name)
 {
 	this->name = name;
 }
 
-void Character::setRace(string race)
+void Character::SetRace(string race)
 {
 	this->race = race;
 }
 
-void Character::setLevel(int level)
+void Character::SetLevel(int level)
 {
 	this->level = level;
 }
 
-void Character::setHealth(int health)
+void Character::SetHealth(int health)
 {
 	this->health = health;
 }
@@ -64,13 +64,8 @@ void Character::Print()
 	cout << "Race: " << race << endl;
 	cout << "Level: " << level << endl;
 	cout << "Health: " << health << endl;
-	cout << endl;
 }
 
-//Implement other functions: A public function called "Attack()" that takes a pointer to a character
-void Character::Attack(Character *target)
-{
 
-}
 
 

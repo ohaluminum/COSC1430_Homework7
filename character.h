@@ -24,10 +24,10 @@ public:
 	int getHealth() const;
 
 	//Setter functions
-	void setName(string name);
-	void setRace(string race);
-	void setLevel(int level);
-	void setHealth(int health);
+	void SetName(string name);
+	void SetRace(string race);
+	void SetLevel(int level);
+	void SetHealth(int health);
 	
 	//Other functions
 	virtual void Print();

@@ -54,7 +54,7 @@ int Mage::AddSpell(string spell_name, int spell_damage, int mana_cost)
  */
 void Mage::nextSpell()
 {
-	if (active_Spell = numOfSpells)
+	if (active_Spell == numOfSpells - 1)
 	{
 		active_Spell = 0;
 	}
@@ -87,7 +87,12 @@ void Mage::Attack(Character *target)
 		}
 		else
 		{
-			target->setHealth(target->getHealth() - spells[active_Spell].damage);
+			target->SetHealth(target->getHealth() - spells[active_Spell].damage);
+			cout << getName() << " attacked " << target->getName()
+				 << " with spell: " << spells[active_Spell].name
+				 << ", dealing " << spells[active_Spell].damage << " damage."
+				 << endl;
+
 			nextSpell();
 		}
 	}
@@ -108,12 +113,7 @@ void Mage::Attack(Character *target)
  */
 void Mage::Print()
 {
-	cout << "Character Status: " << endl;
-	cout << "Name: " << getName() << endl;
-	cout << "Race: " << getRace() << endl;
-	cout << "Occupation: Mage" << endl;
-	cout << "Level: " << getLevel() << endl;
-	cout << "Health: " << getHealth() << endl;
+	Character::Print();
 	cout << "Spells: " << endl;
 
 	for (int i = 0; i < numOfSpells; i++)
@@ -121,7 +121,7 @@ void Mage::Print()
 		cout << spells[i].name << endl;
 	}
 
-	cout << endl;
+	cout << "---" << endl;
 }
 
 
