@@ -73,8 +73,24 @@ void Mage::nextSpell()
  *If the Mage have less mana than the spell's mana_cost, prints out:
  *Insufficient mana points!
  */
-void Mage::Attack(Character* target)
+void Mage::Attack(Character *target)
 {
+	if (numOfSpells == 0)
+	{
+		cout << "This mage has no spells!" << endl;
+	}
+	else
+	{
+		if (mana < spells[active_Spell].mana_cost)
+		{
+			cout << "Insufficient mana points!" << endl;
+		}
+		else
+		{
+			target->setHealth(target->getHealth() - spells[active_Spell].damage);
+			nextSpell();
+		}
+	}
 
 }
 
