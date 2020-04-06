@@ -138,6 +138,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="barbarian.h" />
+    <ClInclude Include="character.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="mage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="barbarian.cpp" />
+    <ClCompile Include="character.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="mage.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="test.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
