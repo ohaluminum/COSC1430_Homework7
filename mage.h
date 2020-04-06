@@ -7,29 +7,29 @@
 using namespace std;
 
 struct spell {
-	string name;
-	int damage;
-	int mana_cost;
+	string name = "";
+	int damage = 0;
+	int mana_cost = 0;
 };
 
 class Mage : public Character {
-
 private:
 	spell spells[10];
 	int numOfSpells = 0;
 	int mana = 100;
 	int active_Spell = 0;
+
 public:
-	//constructors
-	Mage(string name, string race, int level, int health, int mana);
+	//Constructors
+	Mage(string name = "", string race = "", int level = 0, int health = 0, int mana = 0);
 
-	//getters
-	void setMana(int mana_);
+	//Getter functions
+	void setMana(int mana);
 
-	//setters
+	//Setter functions
 	int getMana() const;
 
-	//other functions
+	//Other functions
 	int AddSpell(string spell_name, int spell_damage, int mana_cost);
 	void nextSpell();
 	void Attack(Character * target);

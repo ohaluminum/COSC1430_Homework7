@@ -40,13 +40,13 @@ void Barbarian::EquipWeapon(string name, int damage, int stamina_cost)
  *A public function that overloads "Attack()" taking a pointer to a character
  *and reduce that character's health based on the active_weapon's damage.
  *The function then prints:
- *"<CHARACTER NAME> attacked <TARGET NAME> with a <WEAPON NAME>, dealing <WEAPON DAMAGE> damage."
-
+ *<CHARACTER NAME> attacked <TARGET NAME> with a <WEAPON NAME>, dealing <WEAPON DAMAGE> damage.
+ *
  *However, if the Barbarian does not have a weapon, prints out:
- *"Barbarian has no weapon!"
-
+ *Barbarian has no weapon!
+ *
  *If the Barbarian have less stamina than the weapon's stamina_cost, prints out:
- *"Insufficient stamina points!"
+ *Insufficient stamina points!
  */
 void Barbarian::Attack(Character *target)
 {
