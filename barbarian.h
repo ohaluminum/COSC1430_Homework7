@@ -31,7 +31,7 @@ public:
 	//Other functions
 	void EquipWeapon(string name, int damage, int stamina_cost);
 	void Attack(Character *target) override;
-	void Print();
+	void Print() override;
 };
 
 #endif

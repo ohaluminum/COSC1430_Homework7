@@ -82,9 +82,17 @@ int main()
 		cout << endl;
 
 		switch (option) {
-			case 1: game.NextTurn(); break;
-			case 2: game.Print(); break;
-			case 3: exit(0);
+			case 1: 
+				game.NextTurn(); 
+				break;
+
+			case 2: 
+				game.Print(); 
+				break;
+
+			case 3: 
+				exit(0);
+
 			default:
 				cout << "Invalid Option!" << endl;
 		}

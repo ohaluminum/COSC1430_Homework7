@@ -67,7 +67,11 @@ void Game::AddCharacter(Character *c)
  *Then it checks if the second player has negative health then prints:
  *Player one wins!
  *and exit.
- *If not, the function then calls the second player's Attack function, using the pointer to the first player as the input. Then it checks if the first player has negative health then prints Player two wins! and exit. If not then it returns to main function (the menu)
+ *If not, the function then calls the second player's Attack function, using the pointer to the first player as the input. 
+ *Then it checks if the first player has negative health then prints:
+ *Player two wins! 
+ *and exit. 
+ *If not then it returns to main function (the menu)
  */
 void Game::NextTurn() 
 {
@@ -77,14 +81,34 @@ void Game::NextTurn()
     }
     else
     {
-        players[0]->Attack()
+        players[0]->Attack(players[1]);
 
+        if (players[1]->getHealth() < 0)
+        {
+            cout << "Player one wins!" << endl;
+            exit(0);
+        }
+        else
+        {
+            players[1]->Attack(players[0]);
+
+            if (players[0]->getHealth() < 0)
+            {
+                cout << "Player two wins!" << endl;
+                exit(0);
+            }
+        }
     }
-
 }
 
-
-void Game::Print();
+//A public void function called "Print()" that calls each character in the player array's Print() function
+void Game::Print() 
+{
+    for (int i = 0; i < num_of_characters; i++)
+    {
+        players[i]->Print();
+    }
+}
 
 //Accessors for current turn and number of characters.
 int Game::getCharacters() 
@@ -96,9 +120,4 @@ int Game::getTurn()
 { 
 	return current_turn; 
 }
-
-
-
-A public void function called "Print()" that calls each character in the player array's Print() function
-
 

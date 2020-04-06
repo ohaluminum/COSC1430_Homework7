@@ -35,7 +35,7 @@ public:
 	int AddSpell(string spell_name, int spell_damage, int mana_cost);
 	void nextSpell();
 	void Attack(Character *target) override;
-	void Print();
+	void Print() override;
 };
 
 

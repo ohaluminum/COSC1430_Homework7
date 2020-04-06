@@ -30,7 +30,7 @@ public:
 	void setHealth(int health);
 	
 	//Other functions
-	void Print();
+	virtual void Print();
 	virtual void Attack(Character *target) = 0;
 };
 
