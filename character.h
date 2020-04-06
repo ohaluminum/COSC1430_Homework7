@@ -13,22 +13,22 @@ private:
 	int health;
 
 public:
-	//constructors
+	//Constructors
 	Character(string name = "", string race = "", int level = 0, int health = 0);
 
-	//getter functions
+	//Getter functions
 	string getName() const;
 	string getRace() const;
 	int getLevel() const;
 	int getHealth() const;
 
-	//setter functions
+	//Setter functions
 	void SetName(string name);
 	void SetRace(string race);
 	void SetLevel(int level);
 	void SetHealth(int health);
 	
-	//other functions
+	//Other functions
 	void Print();
 	virtual void Attack(Character *target) = 0;
 };
