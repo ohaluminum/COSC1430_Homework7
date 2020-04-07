@@ -63,9 +63,10 @@ void Barbarian::Attack(Character *target)
         else 
         {
             target->SetHealth(target->getHealth() - active_weapon.damage);
+            stamina -= active_weapon.stamina_cost;
             cout << getName() << " attacked " << target->getName() 
                  << " with a " << active_weapon.name << ", dealing " 
-                 << active_weapon.damage << " damage." 
+                 << active_weapon.damage << " damage."
                  << endl;
         }
     }

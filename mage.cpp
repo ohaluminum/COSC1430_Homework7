@@ -88,6 +88,7 @@ void Mage::Attack(Character *target)
 		else
 		{
 			target->SetHealth(target->getHealth() - spells[active_Spell].damage);
+			mana -= spells[active_Spell].mana_cost;
 			cout << getName() << " attacked " << target->getName()
 				 << " with spell: " << spells[active_Spell].name
 				 << ", dealing " << spells[active_Spell].damage << " damage."

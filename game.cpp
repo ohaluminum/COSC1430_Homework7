@@ -33,18 +33,30 @@ void Game::RemoveCharacter(int index)
     {
         if (index == 0)
         {
-            tempChar = players[1];
-            players[1] = nullptr;
-            players[0] = tempChar;
+            if (num_of_characters == 1)
+            {
+                players[0] = nullptr;
+                num_of_characters--;
+            }
 
-            tempChar = nullptr;
+            else if(num_of_characters == 2)
+            {
+                tempChar = players[1];
+                players[1] = nullptr;
+                players[0] = tempChar;
+
+                tempChar = nullptr;
+                num_of_characters--;
+            } 
         }
         else
         {
-            players[1] = nullptr;
+            if (num_of_characters == 2)
+            {
+                players[1] = nullptr;
+                num_of_characters--;
+            }
         }
-
-        num_of_characters--;
     }
 }
 
