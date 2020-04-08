@@ -7,14 +7,9 @@ using namespace std;
 
 //Implement constructor functions
 Game::Game()
+    : current_turn(0), num_of_characters(0)
 {
-    current_turn = 0;
-    num_of_characters = 0;
-
-    for (int i = 0; i < 2; i++)
-    {
-        players[i] = nullptr;
-    }
+   
 }
 
 /*A public function called "RemoveCharacter()" that takes an int index(0 - 1) of the character to be removed.
