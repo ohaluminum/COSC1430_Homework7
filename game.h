@@ -10,7 +10,7 @@ using namespace std;
 
 class Game {
 private:
-	Character* players[2] = { nullptr, nullptr };
+	Character* players[2] = {nullptr, nullptr};
 	int current_turn;
 	int num_of_characters;
 
